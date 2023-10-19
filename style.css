@@ -1,0 +1,39 @@
+*{box-sizing: border-box;}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2be60e;
+}
+.card{
+    background-color :rgb(255, 255, 255);
+    width: 28%;
+    height: 520px;
+    margin: 2% auto;
+    border-radius: 10px;
+}
+.top, .body, .bottom{
+    font-size: 6em;
+}
+.top, .bottom{
+    padding: 3%;
+    color: red;
+}
+.body{
+    margin-top: 20%;
+    margin-left: 43%;
+}
+.bottom{
+    color: red;
+    margin-top: 19%;
+    float: right;
+    rotate: 190deg;
+}
+.button{
+    
+    right:2%;
+    top: 90%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(38, 245, 23);
+    border-radius: 10px;
+}

@@ -3,42 +3,42 @@ reset.addEventListener('click',()=>{
     location.reload();
 });
 window.onload = function() {
-    let numbers = ['A',1,2,3,4,5,6,7,8,9,10,'J','Q','K'];
+    let numbers = ['A',1,2,3,4,5,6,7,8,9,10,'J','Q','K']; //14
     let number = document.querySelector('#number');
     let random = getRandom(11);
     let symbol = getSymbol(getRandom(4));
-    let topo = document.querySelector('.top');
-    let botton = document.querySelector('.botton');
+    let top = document.querySelector('.top');
+    let bottom = document.querySelector('.bottom');
     if(symbol==='\u2660' || symbol==='\u2663'){
-       top.style.color = 'black';
-       botton.style.color = 'black';
+        top.style.color = 'black';
+        bottom.style.color = 'black';
     }
-    number.innerHTML = number[getRandom(14)];
+    number.innerHTML = numbers[getRandom(14)];
     top.innerHTML = symbol;
-    botton.innerHTML = symbol;
+    bottom.innerHTML = symbol;
+    
 };
 function getRandom(max){
-    return Math.floor(Math.random() * (max - 1) + 1 );
+    return Math.floor(Math.random() * (max - 1) + 1);
 }
 function getSymbol(option){
-    switch (option){
+    switch (option) {
         case 1:
-            let spades ='\u2660'
+            let spades ='\u2660';
             return spades;
             break;
         case 2:
-            let trebols ='\u2660';
-            return spades;
+            let trebols ='\u2663';
+            return trebols;
             break;
-            case 3: 
-            let hearts ='\u2660';
+        case 3:
+            let hearts ='\u2665';
             return hearts;
             break;
-            default:
-                hearts ='\u2660';
-                return hearts;
-                break;
-            
-        
+    
+        default:
+            hearts ='\u2665';
+            return hearts;
+            break;
     }
 }
